@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>M5 F90 — City Drive 3.0 · Babylon</title>
+<title>M5 F90 — City Drive 2.0</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;overflow:hidden;background:#05070b;color:#eaf0f7;
     font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     -webkit-user-select:none;user-select:none;touch-action:none}
   canvas{display:block}
-  #app{position:fixed;left:0;top:0;width:100vw;height:100vh;outline:none}
+  #app{position:fixed;inset:0}
 
   /* ================= HUD (minimal) ================= */
   #hud{position:fixed;inset:0;pointer-events:none;opacity:0;transition:opacity .5s}
@@ -108,7 +108,7 @@
 </style>
 </head>
 <body>
-<canvas id="app" touch-action="none"></canvas>
+<div id="app"></div>
 
 <div id="hud">
   <div id="speedo">
@@ -131,7 +131,7 @@
 <div id="menu" class="screen">
   <div class="card">
     <h1>M5 F90</h1>
-    <div class="sub">CITY DRIVE 3.0 · BABYLON.JS + HAVOK</div>
+    <div class="sub">CITY DRIVE 2.0 · REAL 3D MODELS · PBR</div>
 
     <div id="loading">
       <div id="barOuter"><div id="barFill"></div></div>
@@ -193,9 +193,20 @@
   </div>
 </div>
 
-<script src="lib/babylon.js"></script>
-<script src="lib/babylon.loaders.js"></script>
-<script src="lib/HavokPhysics_umd.js"></script>
-<script src="game.js"></script>
+<script src="assets/lib/three.min.js"></script>
+<script src="assets/lib/cannon.min.js"></script>
+<script src="assets/lib/GLTFLoader.js"></script>
+<script src="assets/lib/DRACOLoader.js"></script>
+<script src="assets/lib/RGBELoader.js"></script>
+<script src="assets/lib/BufferGeometryUtils.js"></script>
+<script src="assets/lib/CopyShader.js"></script>
+<script src="assets/lib/LuminosityHighPassShader.js"></script>
+<script src="assets/lib/EffectComposer.js"></script>
+<script src="assets/lib/RenderPass.js"></script>
+<script src="assets/lib/ShaderPass.js"></script>
+<script src="assets/lib/UnrealBloomPass.js"></script>
+<script src="assets/lib/SMAAShader.js"></script>
+<script src="assets/lib/SMAAPass.js"></script>
+<script src="src/game.js"></script>
 </body>
 </html>
